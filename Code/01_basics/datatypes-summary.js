@@ -17,7 +17,7 @@ const anotherId = Symbol('123');
 // const bigNumber1 = BigInt("1111111111");
 const bigNumber2 = 12345678901235221111111111111n;
 
-console.log(bigNumber2);
+// console.log(bigNumber2);
 
 // Non-primitive (Reference): Given along with memory address and not just the value.
 
@@ -34,3 +34,14 @@ const myFunction = function() {
     console.log("Hello world");
 }
 
+const test = function(n) {
+
+    return function(...args) {
+        return n++;
+    }
+}
+
+const val = test(10);
+console.log(val());
+console.log(val());
+console.log(val());
