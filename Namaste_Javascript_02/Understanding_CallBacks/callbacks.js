@@ -61,7 +61,7 @@ function orderSummary2(paymentStatus) {
 }
 
 // Using a callback to handle what happens after order creation
-const orderId2 = createOrder2(cart, function (orderId) {
+createOrder2(cart, function (orderId) {
   processPayment2(orderId, function (paymentStatus) {
     // This only runs after the order is created
     orderSummary2(paymentStatus);
